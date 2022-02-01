@@ -5,16 +5,17 @@
 body {
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 80vw;
   margin: 0 auto;
   position: relative;
   height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /* navbar area started from here */
 
 .logo {
-  color: rgb(55, 55, 255);
+  color: blue;
   cursor: pointer;
   font-size: 2rem;
 }
@@ -30,6 +31,7 @@ li {
 a {
   text-decoration: none;
   color: #000;
+  font-weight: 500;
 }
 
 .navbar-area {
@@ -53,11 +55,11 @@ a {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: -30px;
-  top: 30px;
+  left: -50px;
+  top: 40px;
   justify-content: center;
-  background-color: skyblue;
-  min-width: 120px;
+  background-color: blue;
+  min-width: 150px;
   padding: 0.5em 0.2em;
   text-align: center;
   display: none;
@@ -66,6 +68,8 @@ a {
 
 .support-options a {
   color: white;
+  padding: 0.2em;
+  margin: 0.3rem;
 }
 
 .user-panel {
@@ -91,17 +95,18 @@ a {
   flex-direction: column;
   position: absolute;
   top: 80%;
-  background-color: skyblue;
+  background-color: blue;
   text-align: left;
-  padding: 0.5em;
-  width: 120px;
+  padding: 0.7em;
+  width: 150px;
   gap: 0.5rem;
-  left: -10px;
+  left: -20px;
   display: none;
 }
 
 .settings-options a {
   color: white;
+  padding: 0.3em 0;
 }
 
 .link-earn::after {
@@ -111,10 +116,28 @@ a {
 }
 
 .link-earn {
-  background-color: #22e473;
+  background-color: rgb(32, 180, 32);
   padding: 0.3em;
   color: white;
   border-radius: 0.1rem;
+}
+
+/* page progress loader */
+
+.progress-loader {
+  background-color: blue;
+  position: fixed;
+  animation: page-progress-loader 5s;
+  display: none;
+}
+
+@keyframes page-progress-loader {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 /* spinner */

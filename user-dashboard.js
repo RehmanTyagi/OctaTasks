@@ -8,6 +8,11 @@ function openPanel() {
   document.getElementById("user-panel-area").style.display = "unset";
   document.getElementById("user-panel-area").style.display = "flex";
 }
+function pageprogressLoader() {
+  document.getElementById("page-loader").style.display = "unset";
+  document.getElementById("page-loader").style.position = "fixed";
+  document.getElementById("page-loader").style.padding = "1px";
+}
 
 function runSpinner() {
   document.getElementById("spinner").style.display = "unset";
