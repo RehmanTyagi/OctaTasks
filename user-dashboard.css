@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
+
+/* navbar area started from here */
+
+.logo {
+  color: rgb(55, 55, 255);
+  cursor: pointer;
+}
+
+.logo > span {
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  align-items: center;
+}
+
+.list-area {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.support-area {
+  position: relative;
+}
+
+.support-options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -30px;
+  top: 30px;
+  justify-content: center;
+  background-color: skyblue;
+  min-width: 120px;
+  padding: 0.5em 0.2em;
+  text-align: center;
+  display: none;
+  border-radius: 0.2rem;
+}
+
+.support-options a {
+  color: white;
+}
+
+.user-panel {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.fa-bell {
+  cursor: pointer;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-settings {
+  cursor: pointer;
+}
+
+.settings-options {
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80%;
+  background-color: skyblue;
+  text-align: left;
+  padding: 0.5em;
+  width: 120px;
+  gap: 0.5rem;
+  left: -10px;
+  display: none;
+}
+
+.settings-options a {
+  color: white;
+}
+
+.link-earn::after {
+  content: "2$";
+  margin-left: 0.3rem;
+  font-weight: bold;
+}
+
+.link-earn {
+  background-color: #22e473;
+  padding: 0.3em;
+  color: white;
+  border-radius: 0.1rem;
+}
+
+/* spinner */
+
+.spinner-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  border-top-color: blue;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
