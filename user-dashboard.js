@@ -11,7 +11,6 @@ function openPanel() {
 function pageprogressLoader() {
   document.getElementById("page-loader").style.display = "unset";
   document.getElementById("page-loader").style.position = "fixed";
-  document.getElementById("page-loader").style.padding = "1px";
 }
 
 function runSpinner() {
