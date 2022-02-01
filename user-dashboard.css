@@ -16,6 +16,7 @@ body {
 .logo {
   color: rgb(55, 55, 255);
   cursor: pointer;
+  font-size: 2rem;
 }
 
 .logo > span {
