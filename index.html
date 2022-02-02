@@ -1,68 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OctaTasks.com</title>
-    <link rel="favicon" href="">
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="img/favicon.PNG" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="user-dashboard.css" />
-  </head>
+</head>
 
-  <body>
-
+<body>
     <!--page progress loader -->
-        <div id="page-loader" class="progress-loader"></div>
+    <div id="page-loader" class="progress-loader"></div>
 
     <!-- spinner -->
     <div id="spinner" class="spinner-box">
-      <div id="loading"></div>
+        <div id="loading"></div>
     </div>
     <section id="dashboard-body" class="dashboard-area">
-      <nav class="navbar-area">
-        <h1 class="logo">Octa<span>Tasks</span></h1>
-        <ul class="list-area">
-          <li class="list bottom-line"><a href="#" class="link">Dashboard</a></li>
-          <li class="list bottom-line"><a href="#" class="link">Task Log</a></li>
-          <li class="list bottom-line"><a href="#" class="link">Training</a></li>
-          <li class="list bottom-line support-area">
-            <a onclick="openSupport()" href="#" class="link support-btn"
-              >Support</a
-            >
-            <div id="user-support-area" class="support-options">
-              <a href="#" class="option-support">Community</a>
-              <a href="https://discord.gg/4vfhEf2Y" target=”_blank” class="option-support">Join On Discord</a>
-            </div>
-          </li>
-          <li class="list"><a href="#" class="link link-earn">Earn</a></li>
-        </ul>
+        <nav class="navbar-area">
+            <h1 class="logo">Octa<span>Tasks</span></h1>
+            <ul class="list-area">
+                <li class="list bottom-line">
+                    <a href="#" class="link">Dashboard</a>
+                </li>
+                <li class="list bottom-line">
+                    <a href="#" class="link">Task Log</a>
+                </li>
+                <li class="list bottom-line">
+                    <a href="#" class="link">Training</a>
+                </li>
+                <li class="list bottom-line support-area">
+                    <a onclick="openSupport()" href="#" class="link support-btn">Support</a>
+                    <div id="user-support-area" class="support-options">
+                        <a href="#" class="option-support">Community</a>
+                        <a href="https://discord.gg/4vfhEf2Y" target="”_blank”" class="option-support">Join On Discord</a>
+                    </div>
+                </li>
+                <li class="list"><a href="#" class=" link-earn">Earn</a></li>
+            </ul>
 
-        <div class="user-panel">
-          <i class="fas fa-bell"></i>
-          <div class="user-menu">
-            <h3 onclick="openPanel()" class="user-settings">
-              OctaTasks <i class="fas fa-caret-down"></i>
-            </h3>
-            <div id="user-panel-area" class="settings-options">
-              <a href="#" class="option">Account</a>
-              <a href="#" class="option">Bank Balance</a>
-              <a href="#" class="option">Terms</a>
-              <a onclick="runSpinner(),pageprogressLoader()" href="#" class="option">Logout</a>
+            <div class="user-panel">
+                <i class="fas fa-bell"></i>
+                <div class="user-menu">
+                    <h3 onclick="openPanel()" class="user-settings">
+                        OctaTasks <i class="fas fa-caret-down"></i>
+                    </h3>
+                    <div id="user-panel-area" class="settings-options">
+                        <a href="#" class="option">Account</a>
+                        <a href="#" class="option">Bank Balance</a>
+                        <a href="#" class="option">Terms</a>
+                        <a onclick="runSpinner(),pageprogressLoader()" href="#" class="option">Logout</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
+
+        <section class="user-dashboard-container">
+            <div class="user-progress-message">
+                <span class="user-welcoming-greeting">Welcome back,</span>
+                <span class="user-welcoming-name">Rehman!</span>
+                <span class="user-focus-message">Here's your OctaTasks progress this week.</span>
+            </div>
+            <div class="main-boxes earning-bar">
+                <div class="boxes-child-1">
+                    <span>₹0<span>.</span><span>00</span></span>
+                </div>
+                <span class="gray-color boxes-child-2">Earnings
+      </div>
+      </span>
+                <div class="main-boxes hours-bar">
+                    <div class="circle-container">
+                        <div class="hours-circle-front"></div>
+                        <div class="current-hours approved-hours">0</div>
+                        <div class="hours-circle-back"></div>
+                    </div>
+                    <span class="gray-color">Approved hours</span>
+                </div>
+                <div class="main-boxes task-attempt">
+                    <span class="tasks-count">0</span>
+                    <span class="gray-color tasks-attempts">Task Attempts</span>
+                </div>
+                <div class="main-boxes review-bar">
+                    <span class="tasks-count">0</span>
+                    <span class="gray-color">Task Reviews</span>
+                </div>
+                <div class="start-work-box">
+                    <span class="label-container">
+          <span class="gray-color start-task-label">Start working now</span>
+                    <i class="gray-color fas fa-angle-right"></i>
+                    </span>
+                    <a href="https://www.remotasks.com/tasks" class="gray-color start-task-btn">
+          Start Work <img src="img/money.png" alt="dollar-icon" />
+        </a>
+                </div>
+        </section>
     </section>
     <script src="user-dashboard.js"></script>
-  </body>
+</body>
+
 </html>

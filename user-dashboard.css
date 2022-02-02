@@ -1,202 +1,302 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  width: 80vw;
-  margin: 0 auto;
-  position: relative;
-  height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+    --shadow--: 0 0 2px;
 }
+
 
 /* navbar area started from here */
 
 .logo {
-  color: blue;
-  cursor: pointer;
-  font-size: 2rem;
+    color: blue;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
-.logo > span {
-  color: black;
+.logo>span {
+    color: black;
 }
 
 li {
-  list-style-type: none;
-  position: relative;
+    list-style-type: none;
+    position: relative;
 }
 
 .bottom-line::after {
-  content: "";
-  background-color: blue;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  transition: 100ms ease-in-out;
+    content: "";
+    background-color: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 100ms ease-in-out;
+}
+
+.list>.link:hover {
+    color: blue;
+    transition: .2s ease-in-out;
 }
 
 .bottom-line:hover:after {
-  animation: navlinks 1s forwards;
+    animation: navlinks 1s forwards;
 }
 
 @keyframes navlinks {
-  from {
-    width: 0;
-    padding: 1px;
-  }
-  to {
-    width: 100%;
-    padding: 1px;
-  }
+    from {
+        width: 0;
+        padding: 1px;
+    }
+    to {
+        width: 100%;
+        padding: 1px;
+    }
 }
 
 a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
 
 .navbar-area {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em 1em;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    align-items: center;
 }
 
 .list-area {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .support-area {
-  position: relative;
+    position: relative;
 }
 
 .support-options {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: -50px;
-  top: 40px;
-  justify-content: center;
-  background-color: blue;
-  min-width: 150px;
-  padding: 0.5em 0.2em;
-  text-align: center;
-  display: none;
-  border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -50px;
+    top: 40px;
+    justify-content: center;
+    background-color: black;
+    min-width: 150px;
+    padding: 0.5em 0.2em;
+    text-align: center;
+    display: none;
+    border-radius: 0.2rem;
+    box-shadow: var(--shadow--);
 }
 
 .support-options a {
-  color: white;
-  padding: 0.2em;
-  margin: 0.3rem;
+    color: white;
+    padding: 0.2em;
+    margin: 0.3rem;
 }
 
 .user-panel {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
+
 .fa-bell {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .user-menu {
-  position: relative;
+    position: relative;
 }
 
 .user-settings {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .settings-options {
-  border-radius: 0.2rem;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 90%;
-  background-color: blue;
-  text-align: left;
-  padding: 0.7em;
-  width: 150px;
-  gap: 0.5rem;
-  left: -20px;
-  display: none;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90%;
+    background-color: black;
+    text-align: left;
+    padding: 0.7em;
+    width: 150px;
+    gap: 0.5rem;
+    left: -20px;
+    display: none;
+    box-shadow: var(--shadow--);
 }
 
 .settings-options a {
-  color: white;
-  padding: 0.3em 0;
+    color: white;
+    padding: 0.3em 0;
 }
 
 .link-earn::after {
-  content: "2$";
-  margin-left: 0.3rem;
-  font-weight: bold;
+    content: "2$";
+    margin-left: 0.3rem;
+    font-weight: bold;
 }
 
 .link-earn {
-  background-color: rgb(32, 180, 32);
-  padding: 0.3em;
-  color: white;
-  border-radius: 0.1rem;
+    background-color: rgb(32, 180, 32);
+    padding: 0.3em;
+    color: white;
+    border-radius: 0.1rem;
 }
+
 
 /* page progress loader */
 
 .progress-loader {
-  background-color: blue;
-  position: fixed;
-  animation: page-progress-loader 5s;
-  display: none;
+    background-color: blue;
+    position: fixed;
+    animation: page-progress-loader 5s;
+    display: none;
 }
 
 @keyframes page-progress-loader {
-  from {
-    width: 0;
-    padding: 1px;
-  }
-  to {
-    width: 80%;
-    padding: 1px;
-  }
+    from {
+        width: 0;
+        padding: 1px;
+    }
+    to {
+        width: 80%;
+        padding: 1px;
+    }
 }
+
 
 /* spinner */
 
 .spinner-box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%);
-  display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
 }
 
 #loading {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  border-top-color: blue;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    border-top-color: blue;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
+
 @-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+/* user-dashboard-container section started from here */
+
+.user-dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background-color: blue;
+    color: white;
+    justify-content: center;
+    border-radius: .5em;
+    margin: 0 auto;
+}
+
+.gray-color {
+    color: rgb(240, 240, 240);
+}
+
+.user-progress-message {
+    padding: 3em 1em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    grid-column: 1/6;
+}
+
+.start-work-box {
+    grid-column: 1/6;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1em;
+    margin: 1rem auto;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.start-task-btn img {
+    height: 30px;
+}
+
+.start-task-btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4em .5em;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: 600;
+}
+
+
+/* main area of the dashboard started from here */
+
+.main-boxes {
+    margin: 1rem 2rem;
+    --my-gap--: 1rem;
+    --my-padding--: 1em;
+    --my-text-align--: center;
+    --native-color--: blue;
+    --my-title-font-size--: 2rem;
+}
+
+.earning-bar,
+.task-attempt,
+.hours-bar,
+.review-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--my-gap--);
+    padding: var(--my-padding--);
+    text-align: var(--my-text-align--);
+}
+
+.approved-hours,
+.tasks-count,
+.boxes-child-1 {
+    font-size: var(--my-title-font-size--);
 }
