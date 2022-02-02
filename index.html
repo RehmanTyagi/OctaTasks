@@ -10,7 +10,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,600;1,700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,600;1,700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="user-dashboard.css" />
 </head>
 
@@ -23,6 +25,22 @@
         <div id="loading"></div>
     </div>
     <section id="dashboard-body" class="dashboard-area">
+
+        <!-- referral program pop-box -->
+
+    <div id="referral-container" class="referral-detail-box">
+        <h2 class="ref-heading">Refer your friends and earn 2$ free credit!</h2>
+        <p class="ref-message">There are no limits to how much you earn, so invite all of your friends! </p>
+        <input type="email" name="referralEmail" id="referral-Email-Box">
+        <button id="send-invite-btn" class="send-email-invite">Send</button>
+        <div class="or-container">
+            or
+        </div>
+        <button id="send-invite-btn" class="send-facebook-invite">Facebook</button>
+        <div class="share-via-link">Share Your Link:</div>
+        <p class="referral-origin-link">http://octatasks.com/rehman004AQE/redirect/signup-page</p>
+    </div>
+
         <nav class="navbar-area">
             <h1 class="logo">Octa<span>Tasks</span></h1>
             <ul class="list-area">
@@ -39,10 +57,11 @@
                     <a onclick="openSupport()" href="#" class="link support-btn">Support</a>
                     <div id="user-support-area" class="support-options">
                         <a href="#" class="option-support">Community</a>
-                        <a href="https://discord.gg/4vfhEf2Y" target="”_blank”" class="option-support">Join On Discord</a>
+                        <a href="https://discord.gg/4vfhEf2Y" target="”_blank”" class="option-support">Join On
+                            Discord</a>
                     </div>
                 </li>
-                <li class="list"><a href="#" class=" link-earn">Earn</a></li>
+                <li onclick="refengine()" class="list"><a href="#" class=" link-earn">Earn</a></li>
             </ul>
 
             <div class="user-panel">
@@ -72,33 +91,33 @@
                     <span>₹0<span>.</span><span>00</span></span>
                 </div>
                 <span class="gray-color boxes-child-2">Earnings
-      </div>
-      </span>
-                <div class="main-boxes hours-bar">
-                    <div class="circle-container">
-                        <div class="hours-circle-front"></div>
-                        <div class="current-hours approved-hours">0</div>
-                        <div class="hours-circle-back"></div>
-                    </div>
-                    <span class="gray-color">Approved hours</span>
+            </div>
+            </span>
+            <div class="main-boxes hours-bar">
+                <div class="circle-container">
+                    <div class="hours-circle-front"></div>
+                    <div class="current-hours approved-hours">0</div>
+                    <div class="hours-circle-back"></div>
                 </div>
-                <div class="main-boxes task-attempt">
-                    <span class="tasks-count">0</span>
-                    <span class="gray-color tasks-attempts">Task Attempts</span>
-                </div>
-                <div class="main-boxes review-bar">
-                    <span class="tasks-count">0</span>
-                    <span class="gray-color">Task Reviews</span>
-                </div>
-                <div class="start-work-box">
-                    <span class="label-container">
-          <span class="gray-color start-task-label">Start working now</span>
+                <span class="gray-color">Approved hours</span>
+            </div>
+            <div class="main-boxes task-attempt">
+                <span class="tasks-count">0</span>
+                <span class="gray-color tasks-attempts">Task Attempts</span>
+            </div>
+            <div class="main-boxes review-bar">
+                <span class="tasks-count">0</span>
+                <span class="gray-color">Task Reviews</span>
+            </div>
+            <div class="start-work-box">
+                <span class="label-container">
+                    <span class="gray-color start-task-label">Start working now</span>
                     <i class="gray-color fas fa-angle-right"></i>
-                    </span>
-                    <a href="https://www.remotasks.com/tasks" class="gray-color start-task-btn">
-          Start Work <img src="img/money.png" alt="dollar-icon" />
-        </a>
-                </div>
+                </span>
+                <a href="https://www.remotasks.com/tasks" class="gray-color start-task-btn">
+                    Start Work <img src="img/money.png" alt="dollar-icon" />
+                </a>
+            </div>
         </section>
     </section>
     <script src="user-dashboard.js"></script>

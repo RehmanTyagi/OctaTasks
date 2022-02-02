@@ -224,6 +224,7 @@ a {
     justify-content: center;
     border-radius: .5em;
     margin: 0 auto;
+    width: 800px;
 }
 
 .gray-color {
@@ -299,4 +300,61 @@ a {
 .tasks-count,
 .boxes-child-1 {
     font-size: var(--my-title-font-size--);
+}
+
+/* referral-detail-box started from here */
+
+.referral-detail-box{
+    padding: 2em;
+    width: 500px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 20px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    --ref-padding--:.5em;
+    --ref-btn-font--:600;
+    --ref-margin--:1rem;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+}
+
+.ref-heading,.ref-message,.share-via-link,.or-container{
+    text-align: center;
+}
+
+.ref-message{
+    margin: .5em;
+}
+
+#referral-Email-Box{
+    margin: 1em 0;
+    padding: var(--ref-padding--);
+    width: 100%;
+    outline-color: black;
+    font-weight: var(--ref-btn-font--);
+}
+.send-email-invite{
+    padding: var(--ref-padding--);
+    font-weight: var(--ref-btn-font--);
+}
+
+.or-container{
+    text-align: center;
+    padding: var(--ref-padding--);
+}
+
+.send-facebook-invite{
+    padding: var(--ref-padding--);
+    font-weight: var(--ref-btn-font--);
+    background-color: blue;
+    color: white;
+}
+
+.share-via-link{
+    margin: var(--ref-margin--);
+    text-align: center;
 }

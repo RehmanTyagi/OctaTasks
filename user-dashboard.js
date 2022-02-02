@@ -20,8 +20,8 @@ function runSpinner() {
     document.getElementById("spinner").style.zIndex = "10";
     document.getElementById("dashboard-body").style.opacity = "0.1";
 }
-
-
-function workEngine() {
-    window.location.replace('');
+function refengine() {
+    document.getElementById("referral-container").style.display = "unset";
+    document.getElementById("referral-container").style.zIndex = "11";
+    document.getElementById("referral-container").style.display = "flex";
 }
