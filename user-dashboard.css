@@ -1,364 +1,435 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    position: relative;
-    height: 100vh;
-    font-family: "Josefin Sans", sans-serif;
-    --shadow--: 0 0 2px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  --shadow--: 0 0 2px black;
 }
 
-.dashboard-area{
-    width: 80vw;
-    margin: 0 auto;
+.dashboard-area {
+  width: 80vw;
+  margin: 0 auto;
 }
-
 
 /* navbar area started from here */
 
 .logo {
-    color: blue;
-    cursor: pointer;
-    font-size: 2rem;
+  color: blue;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
-.logo>span {
-    color: black;
+.logo > span {
+  color: black;
 }
 
 li {
-    list-style-type: none;
-    position: relative;
+  list-style-type: none;
+  position: relative;
 }
 
 .bottom-line::after {
-    content: "";
-    background-color: blue;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    transition: 100ms ease-in-out;
+  content: "";
+  background-color: blue;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: 100ms ease-in-out;
 }
 
-.list>.link:hover {
-    color: blue;
-    transition: .2s ease-in-out;
+.list > .link:hover {
+  color: blue;
+  transition: 0.2s ease-in-out;
 }
 
 .bottom-line:hover:after {
-    animation: navlinks 1s forwards;
+  animation: navlinks 1s forwards;
 }
 
 @keyframes navlinks {
-    from {
-        width: 0;
-        padding: 1px;
-    }
-    to {
-        width: 100%;
-        padding: 1px;
-    }
+  from {
+    width: 0;
+    padding: 1px;
+  }
+  to {
+    width: 100%;
+    padding: 1px;
+  }
 }
 
 a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
 
 .navbar-area {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em 1em;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  align-items: center;
 }
 
 .list-area {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .support-area {
-    position: relative;
+  position: relative;
 }
 
 .support-options {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: -50px;
-    top: 40px;
-    justify-content: center;
-    background-color: black;
-    min-width: 150px;
-    padding: 0.5em 0.2em;
-    text-align: center;
-    display: none;
-    border-radius: 0.2rem;
-    box-shadow: var(--shadow--);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  justify-content: center;
+  background-color: black;
+  min-width: 150px;
+  padding: 0.5em 0.2em;
+  text-align: center;
+  display: none;
+  border-radius: 0.2rem;
+  box-shadow: var(--shadow--);
 }
 
 .support-options a {
-    color: white;
-    padding: 0.2em;
-    margin: 0.3rem;
+  color: white;
+  padding: 0.2em;
+  margin: 0.3rem;
 }
 
 .user-panel {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .fa-bell {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .user-menu {
-    position: relative;
+  position: relative;
 }
 
 .user-settings {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .settings-options {
-    border-radius: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 90%;
-    background-color: black;
-    text-align: left;
-    padding: 0.7em;
-    width: 150px;
-    gap: 0.5rem;
-    left: -20px;
-    display: none;
-    box-shadow: var(--shadow--);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 90%;
+  background-color: black;
+  text-align: left;
+  padding: 0.7em;
+  width: 150px;
+  gap: 0.5rem;
+  left: -20px;
+  display: none;
+  box-shadow: var(--shadow--);
 }
 
 .settings-options a {
-    color: white;
-    padding: 0.3em 0;
+  color: white;
+  padding: 0.3em 0;
 }
 
 .link-earn::after {
-    content: "2$";
-    margin-left: 0.3rem;
-    font-weight: bold;
+  content: "2$";
+  margin-left: 0.3rem;
+  font-weight: bold;
 }
 
 .link-earn {
-    background-color: rgb(32, 180, 32);
-    padding: 0.3em;
-    color: white;
-    border-radius: 0.1rem;
+  background-color: rgb(32, 180, 32);
+  padding: 0.3em;
+  color: white;
+  border-radius: 0.1rem;
 }
-
 
 /* page progress loader */
 
 .progress-loader {
-    background-color: blue;
-    position: fixed;
-    animation: page-progress-loader 5s;
-    display: none;
+  background-color: blue;
+  position: fixed;
+  animation: page-progress-loader 5s;
+  display: none;
 }
 
 @keyframes page-progress-loader {
-    from {
-        width: 0;
-        padding: 1px;
-    }
-    to {
-        width: 80%;
-        padding: 1px;
-    }
+  from {
+    width: 0;
+    padding: 1px;
+  }
+  to {
+    width: 100%;
+    padding: 1px;
+  }
 }
-
 
 /* spinner */
 
 .spinner-box {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: none;
 }
 
 #loading {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    border-top-color: blue;
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  border-top-color: blue;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
 }
 
 @keyframes spin {
-    to {
-        -webkit-transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spin {
-    to {
-        -webkit-transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
 
 /* user-dashboard-container section started from here */
 
 .user-dashboard-container {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    background-color: blue;
-    color: white;
-    justify-content: center;
-    border-radius: .5em;
-    margin: 0 auto;
-    width: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: blue;
+  color: white;
+  justify-content: center;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  box-shadow: var(--shadow--);
+
 }
 
 .gray-color {
-    color: rgb(240, 240, 240);
+  color: rgb(240, 240, 240);
 }
 
 .user-progress-message {
-    padding: 3em 1em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    grid-column: 1/6;
+  padding: 3em 1em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: 1/6;
 }
 
 .start-work-box {
-    grid-column: 1/6;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: 1em;
-    margin: 1rem auto;
+  grid-column: 1/6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1em;
+  margin: 1rem auto;
 }
 
 .label-container {
-    display: flex;
-    align-items: center;
-    gap: .5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .start-task-btn img {
-    height: 30px;
+  height: 30px;
 }
 
 .start-task-btn {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .4em .5em;
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-    background-color: black;
-    border: none;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4em 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  border: none;
+  font-weight: 600;
 }
-
 
 /* main area of the dashboard started from here */
 
 .main-boxes {
-    margin: 1rem 2rem;
-    --my-gap--: 1rem;
-    --my-padding--: 1em;
-    --my-text-align--: center;
-    --native-color--: blue;
-    --my-title-font-size--: 2rem;
+  margin: 1rem 2rem;
+  --my-gap--: 1rem;
+  --my-padding--: 1em;
+  --my-text-align--: center;
+  --native-color--: blue;
+  --my-title-font-size--: 2rem;
 }
 
 .earning-bar,
 .task-attempt,
 .hours-bar,
 .review-bar {
-    display: flex;
-    flex-direction: column;
-    gap: var(--my-gap--);
-    padding: var(--my-padding--);
-    text-align: var(--my-text-align--);
+  display: flex;
+  flex-direction: column;
+  gap: var(--my-gap--);
+  padding: var(--my-padding--);
+  text-align: var(--my-text-align--);
 }
 
 .approved-hours,
 .tasks-count,
 .boxes-child-1 {
-    font-size: var(--my-title-font-size--);
+  font-size: var(--my-title-font-size--);
 }
 
 /* referral-detail-box started from here */
 
-.referral-detail-box{
-    padding: 2em;
-    width: 500px;
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: 0 0 20px;
-    display: flex;
-    display: none;
-    flex-direction: column;
-    --ref-padding--:.5em;
-    --ref-btn-font--:600;
-    --ref-margin--:1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    transform: translateY(-50%) translateX(-50%);
+.referral-detail-box {
+  padding: 2em;
+  width: 500px;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 0 20px;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  --ref-padding--: 0.5em;
+  --ref-btn-font--: 600;
+  --ref-margin--: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translateY(-50%) translateX(-50%);
+  --ref-pointer--:pointer;
 }
 
-.ref-heading,.ref-message,.share-via-link,.or-container{
-    text-align: center;
+.ref-heading,
+.ref-message,
+.share-via-link,
+.or-container {
+  text-align: center;
 }
 
-.ref-message{
-    margin: .5em;
+.ref-message {
+  margin: 0.5em;
 }
 
-#referral-Email-Box{
-    margin: 1em 0;
-    padding: var(--ref-padding--);
-    width: 100%;
-    outline-color: black;
-    font-weight: var(--ref-btn-font--);
+#referral-Email-Box {
+  margin: 1em 0;
+  padding: var(--ref-padding--);
+  width: 100%;
+  outline-color: black;
+  font-weight: var(--ref-btn-font--);
 }
-.send-email-invite{
-    padding: var(--ref-padding--);
-    font-weight: var(--ref-btn-font--);
-}
-
-.or-container{
-    text-align: center;
-    padding: var(--ref-padding--);
+.send-email-invite {
+  padding: var(--ref-padding--);
+  font-weight: var(--ref-btn-font--);
+  cursor: var(--ref-pointer--);
 }
 
-.send-facebook-invite{
-    padding: var(--ref-padding--);
-    font-weight: var(--ref-btn-font--);
-    background-color: blue;
-    color: white;
+.or-container {
+  text-align: center;
+  padding: var(--ref-padding--);
 }
 
-.share-via-link{
-    margin: var(--ref-margin--);
-    text-align: center;
+.send-facebook-invite {
+  padding: var(--ref-padding--);
+  font-weight: var(--ref-btn-font--);
+  cursor: var(--ref-pointer--);
+  background-color: blue;
+  color: white;
+}
+
+.share-via-link {
+  margin: var(--ref-margin--);
+  text-align: center;
+}
+
+.fa-times{
+  background-color: blue;
+  float: right;
+  color: #fff;
+  padding: .6em .8em;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* eligible project and bonus section started from here */
+
+.eligible-project-bonus-section {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  --pb-default-padding--: 1em;
+}
+
+.project-area,.bonus-area,.referral-status-bar {
+  padding: var(--pb-default-padding--);
+  background-color: gainsboro;
+  margin:0 0.5rem;
+  box-shadow: var(--shadow--);
+}
+
+.icon-container > img {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  padding: 0.5em;
+  animation: roll-icon 2s infinite;
+}
+
+.icon-container >img:hover{
+  animation-play-state: paused;
+  box-shadow:var(--shadow--);
+}
+
+@keyframes roll-icon {
+ 
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-main-container,.bonus-area-tabs,.referral-area-tabs{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.referral-status-bar{
+  grid-column: 1/6;
+  margin: 1rem auto;
+}
+
+.referral-status-heading{
+  text-align: center;
+}
+
+.referral-details{
+  margin: 0 2rem;
 }

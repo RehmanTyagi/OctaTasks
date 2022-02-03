@@ -25,3 +25,6 @@ function refengine() {
     document.getElementById("referral-container").style.zIndex = "11";
     document.getElementById("referral-container").style.display = "flex";
 }
+function refengineoff() {
+    document.getElementById("referral-container").style.display = "none";
+}

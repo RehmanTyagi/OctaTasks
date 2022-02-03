@@ -29,6 +29,9 @@
         <!-- referral program pop-box -->
 
         <div id="referral-container" class="referral-detail-box">
+            <span class=" ref-pop-close" >
+                <i onclick="refengineoff()" class="fas fa-times"></i>
+            </span>
             <h2 class="ref-heading">Refer your friends and earn 2$ free credit!</h2>
             <p class="ref-message">There are no limits to how much you earn, so invite all of your friends! </p>
             <input type="email" name="referralEmail" id="referral-Email-Box">
@@ -68,7 +71,7 @@
                 <i class="fas fa-bell"></i>
                 <div class="user-menu">
                     <h3 onclick="openPanel()" class="user-settings">
-                        OctaTasks <i class="fas fa-caret-down"></i>
+                        Rehman <i class="fas fa-caret-down"></i>
                     </h3>
                     <div id="user-panel-area" class="settings-options">
                         <a href="#" class="option">Account</a>
@@ -107,7 +110,7 @@
             </div>
             <div class="main-boxes review-bar">
                 <span class="tasks-count">0</span>
-                <span class="gray-color">Task Reviews</span>
+                <span class="gray-color">Task Pending</span>
             </div>
             <div class="start-work-box">
                 <span class="label-container">
@@ -119,6 +122,59 @@
                 </a>
             </div>
         </section>
+
+        <!-- eligible project and bonus section started from here -->
+
+        <div class="eligible-project-bonus-section">
+
+            <div class="project-area">
+                <h3 class="project-heading">Your Eligible Projects</h3>
+
+                <div class="icon-main-container">
+
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/2d.png" alt="icon">
+                        <p>2D</p>
+                    </span>
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/bee.png" alt="icon">
+                        <p>Bee</p>
+                    </span>
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/eagle.png" alt="icon">
+                        <p>Falcon</p>
+                    </span>
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/2d.png" alt="icon">
+                        <p>2D</p>
+                    </span>
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/bee.png" alt="icon">
+                        <p>Bee</p>
+                    </span>
+                    <span class="icon-container">
+                        <img class="project-icon" src="img/project-icons/eagle.png" alt="icon">
+                        <p>Falcon</p>
+                    </span>
+                </div>
+            </div>
+            <div class="bonus-area">
+                <h3 class="bonus-heading">Bonuses</h3>
+                <div class="bonus-area-tabs">
+                    <span>Processed</span>
+                    <span>Pending</span>
+                    <span>Prediction</span>
+                </div>
+            </div>
+            <div class="referral-status-bar">
+                <h3 class="referral-status-heading">Referral Target Status</h3>
+                <div class="referral-area-tabs">
+                    <span class="referral-details">Name</span>
+                    <span class="referral-details">Earned</span>
+                    <span class="referral-details">Days left</span>
+                </div>
+            </div>
+
     </section>
     <script src="user-dashboard.js"></script>
 </body>
