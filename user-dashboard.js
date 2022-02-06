@@ -31,14 +31,8 @@ function refengineoff() {
   document.getElementById("referral-container").style.display = "none";
 }
 
-if (notificationShow == 2) {
-  function notificationShow() {
-    document.querySelector(".notificaton-area").style.display = "unset";
-  }
-} else {
-  function notificationShow() {
-    document.querySelector(".notificaton-area").style.display = "unset";
-  }
+function notificationShow() {
+  document.querySelector(".notificaton-area").style.display = "unset";
 }
 
 document.querySelector(".fa-bell").addEventListener("click", notificationShow);
