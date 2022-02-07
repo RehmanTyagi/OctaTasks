@@ -34,5 +34,8 @@ function refengineoff() {
 function notificationShow() {
   document.querySelector(".notificaton-area").style.display = "unset";
 }
+function notificationShow() {
+  document.querySelector(".notificaton-area").style.display = "unset";
+}
 
 document.querySelector(".fa-bell").addEventListener("click", notificationShow);

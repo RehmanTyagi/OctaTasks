@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OctaTasks.com</title>
+    <link rel="icon" href="img/favicon.PNG" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="user-dashboard.css" />
+</head>
+
+<body>
+    <!--page progress loader -->
+    <div id="page-loader" class="progress-loader"></div>
+
+    <!-- spinner -->
+    <div id="spinner" class="spinner-box">
+        <div id="loading"></div>
+    </div>
+    <section id="dashboard-body" class="dashboard-area">
+
+        <!-- referral program pop-box -->
+
+        <div id="referral-container" class="referral-detail-box">
+            <span class=" ref-pop-close">
+                <i onclick="refengineoff()" class="fas fa-times"></i>
+            </span>
+            <h2 class="ref-heading">Refer your friends and earn 2$, when they earn 5$.</h2>
+            <p class="ref-message">There are no limits to how much you earn, so invite all of your friends! </p>
+            <input type="email" name="referralEmail" id="referral-Email-Box">
+            <button id="send-invite-btn" class="send-email-invite">Send</button>
+            <div class="or-container">
+                or
+            </div>
+            <button id="send-invite-btn" class="send-facebook-invite">Facebook</button>
+            <div class="share-via-link">Share Your Link:</div>
+            <p class="referral-origin-link">http://octatasks.com/rehman004AQE/redirect/signup-page</p>
+        </div>
+
+        <nav class="navbar-area">
+            <h1 class="logo">Octa<span class="logo-black">Tasks</span></h1>
+            <ul class="list-area">
+                <li class="list bottom-line">
+                    <a href="#" class="link">Dashboard</a>
+                </li>
+                <li class="list bottom-line">
+                    <a href="#" class="link">Task Log</a>
+                </li>
+                <li class="list bottom-line">
+                    <a href="#" class="link">Training</a>
+                </li>
+                <li class="list bottom-line support-area">
+                    <a onclick="openSupport()" href="#" class="link support-btn">Support</a>
+                    <div id="user-support-area" class="support-options">
+                        <a href="#" class="option-support">Community</a>
+                        <a href="https://discord.gg/4vfhEf2Y" target="”_blank”" class="option-support">Join On
+                            Discord</a>
+                    </div>
+                </li>
+                <li onclick="refengine()" class="list"><a href="#" class=" link-earn">Earn</a></li>
+            </ul>
+
+            <div class="user-panel">
+                <div class="notificaton-area">
+                    <div class="noti-title-container">
+                        <p>Notification</p>
+                        <a href="#" class="clear-btn">Clear All</a>
+                    </div>
+                    <div class="inbox-content">
+                        <div class="admin-message-area">
+                            <img src="img/favicon.JPG" alt="profile Picture" class="profile">
+                            <div class="admin-message">
+                                <div class="admin-name">Admin Manish,</div>
+                                <span class="message">Dear Tasker, Thank you for joining our platform.</span>
+                                <div class="message-time">
+                                    <i class="fas fa-comment"></i>
+                                    <span>Just Now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin-message-area">
+                            <img src="img/favicon.JPG" alt="profile Picture" class="profile">
+                            <div class="admin-message">
+                                <div class="admin-name">Manish</div>
+                                <span class="message">Dear Tasker, Thank you for joining our platform.</span>
+                                <div class="message-time">
+                                    <i class="fas fa-comment"></i>
+                                    <span>At 9:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin-message-area">
+                            <img src="img/favicon.JPG" alt="profile Picture" class="profile">
+                            <div class="admin-message">
+                                <div class="admin-name">Manish</div>
+                                <span class="message">Dear Tasker, Thank you for joining our platform.</span>
+                                <div class="message-time">
+                                    <i class="fas fa-comment"></i>
+                                    <span>Just Now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="fas fa-bell">
+                </i>
+                <div class="user-menu">
+                    <h3 onclick="openPanel()" class="user-settings">
+                        Rehman <i class="fas fa-caret-down"></i>
+                    </h3>
+                    <div id="user-panel-area" class="settings-options">
+                        <a href="#" class="option">Account</a>
+                        <a href="#" class="option">Bank Balance</a>
+                        <a href="#" class="option">Terms</a>
+                        <a onclick="runSpinner(),pageprogressLoader()" href="#" class="option">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="task-details-area">
+            <div class="task-log-container-one">
+                <div class="color-dot-box">
+                    <span class="red"></span>
+                    <span>Red color means Rejected!</span>
+                </div>
+                <div class="color-dot-box">
+                    <span class="yellow"></span>
+                    <span>Yellow color means Fixed!</span>
+                </div>
+                <div class="color-dot-box">
+                    <span class="green"></span>
+                    <span>Green color means Accepted</span>
+                </div>
+            </div>
+            <div class="task-log-container-two">
+                <button class="training-center">Training Center</button>
+                <button class="training-support">Support / Help</button>
+            </div>
+            <div class="task-log-container-three">
+                <div class="task-details-row-container">
+                    <span class="task-details-row-box">Task ID</span>
+                    <span class="task-details-row-box">Submission ID</span>
+                    <span class="task-details-row-box">Attempted</span>
+                    <span class="task-details-row-box">Completed</span>
+                    <span class="task-details-row-box">Payout</span>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <script src="user-dashboard.js"></script>
+</body>
+
+</html>
