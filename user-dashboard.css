@@ -1,666 +1,87 @@
+:root {
+  --low-padding--: 0.5em;
+  --normal-padding--: 1em;
+  --high-padding--: 1.5em;
+  --container-GB-color--: blue;
+  --container-Font-color--: white;
+  --box-shadow--: 0 0em 5em 0em;
+}
+
 * {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 0;
   margin: 0;
-  position: relative;
-  height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
-  --shadow--: 0 0 2px black;
+  padding: 0;
+  appearance: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.dashboard-area {
-  width: 80vw;
-  margin: 0 auto;
-}
-
-/* navbar area started from here */
-
-.logo {
-  color: blue;
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.logo > .logo-black {
-  color: black;
-}
-
-li {
-  list-style-type: none;
-  position: relative;
-}
-
-.bottom-line::after {
-  content: "";
-  background-color: blue;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  transition: 100ms ease-in-out;
-}
-
-.list > .link:hover {
-  color: blue;
-  transition: 0.2s ease-in-out;
-}
-
-.bottom-line:hover:after {
-  animation: navlinks 1s forwards;
-}
-
-@keyframes navlinks {
-  from {
-    width: 0;
-    padding: 1px;
-  }
-  to {
-    width: 100%;
-    padding: 1px;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
-
-.navbar-area {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em 1em;
-  align-items: center;
-}
-
-.list-area {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.support-area {
-  position: relative;
-}
-
-.support-options {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: -50px;
-  top: 40px;
-  justify-content: center;
-  background-color: black;
-  min-width: 150px;
-  padding: 0.5em 0.2em;
-  text-align: center;
-  display: none;
-  border-radius: 0.2rem;
-  box-shadow: var(--shadow--);
-}
-
-.support-options a {
-  color: white;
-  padding: 0.2em;
-  margin: 0.3rem;
-}
-
-.user-panel {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  position: relative;
-}
-
-.fa-bell {
-  cursor: pointer;
-}
-
-.user-menu {
-  position: relative;
-}
-
-.user-settings {
-  cursor: pointer;
-}
-
-.settings-options {
-  border-radius: 0.2rem;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 90%;
-  background-color: black;
-  text-align: left;
-  padding: 0.7em;
-  width: 150px;
-  gap: 0.5rem;
-  left: -20px;
-  display: none;
-  box-shadow: var(--shadow--);
-  z-index: 14;
-}
-
-.settings-options a {
-  color: white;
-  padding: 0.3em 0;
-}
-
-.link-earn::after {
-  content: "2$";
-  margin-left: 0.3rem;
-  font-weight: bold;
-}
-
-.link-earn {
-  background-color: rgb(32, 180, 32);
-  padding: 0.3em;
-  color: white;
-  border-radius: 0.1rem;
-}
-
-/* page progress loader */
-
-.progress-loader {
-  background-color: blue;
-  position: fixed;
-  animation: page-progress-loader 5s;
-  display: none;
-}
-
-@keyframes page-progress-loader {
-  from {
-    width: 0;
-    padding: 1px;
-  }
-  to {
-    width: 100%;
-    padding: 1px;
-  }
-}
-
-/* spinner */
-
-.spinner-box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  display: none;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-#loading {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  border-top-color: blue;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-/* user-dashboard-container section started from here */
-
-.user-dashboard-container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  background-color: blue;
-  color: white;
-  justify-content: center;
-  border-radius: 0.5em;
-  margin: 0 auto;
-  box-shadow: var(--shadow--);
-}
-
-.gray-color {
-  color: rgb(240, 240, 240);
-}
-
-.user-progress-message {
-  padding: 3em 1em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  grid-column: 1/6;
-}
-
-.start-work-box {
-  grid-column: 1/6;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1em;
-  margin: 1rem auto;
-}
-
-.label-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.start-task-btn img {
-  height: 30px;
-}
-
-.start-task-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4em 0.5em;
-  cursor: pointer;
-  border-radius: 5px;
-  color: white;
-  background-color: black;
-  border: none;
-  font-weight: 600;
-}
-
-/* main area of the dashboard started from here */
-
-.main-boxes {
-  margin: 1rem 2rem;
-  --my-gap--: 1rem;
-  --my-padding--: 1em;
-  --my-text-align--: center;
-  --native-color--: blue;
-  --my-title-font-size--: 2rem;
-}
-
-.earning-bar,
-.task-attempt,
-.hours-bar,
-.review-bar {
-  display: flex;
-  flex-direction: column;
-  gap: var(--my-gap--);
-  padding: var(--my-padding--);
-  text-align: var(--my-text-align--);
-}
-
-.approved-hours,
-.tasks-count,
-.boxes-child-1 {
-  font-size: var(--my-title-font-size--);
-}
-
-/* referral-detail-box started from here */
-
-.referral-detail-box {
-  padding: 2em;
-  width: 500px;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 0 0 20px;
-  display: flex;
-  display: none;
-  flex-direction: column;
-  --ref-padding--: 0.5em;
-  --ref-btn-font--: 600;
-  --ref-margin--: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
-  transform: translateY(-50%) translateX(-50%);
-  --ref-pointer--: pointer;
-}
-
-.ref-heading,
-.ref-message,
-.share-via-link,
-.or-container {
-  text-align: center;
-}
-
-.ref-message {
-  margin: 0.5em;
-}
-
-#referral-Email-Box {
-  margin: 1em 0;
-  padding: var(--ref-padding--);
-  width: 100%;
-  outline-color: black;
-  font-weight: var(--ref-btn-font--);
-}
-
-.send-email-invite {
-  padding: var(--ref-padding--);
-  font-weight: var(--ref-btn-font--);
-  cursor: var(--ref-pointer--);
-}
-
-.or-container {
-  text-align: center;
-  padding: var(--ref-padding--);
-}
-
-.send-facebook-invite {
-  padding: var(--ref-padding--);
-  font-weight: var(--ref-btn-font--);
-  cursor: var(--ref-pointer--);
-  background-color: blue;
-  color: white;
-}
-
-.share-via-link {
-  margin: var(--ref-margin--);
-  text-align: center;
-}
-
-.fa-times {
-  background-color: blue;
-  float: right;
-  color: #fff;
-  padding: 0.6em 0.8em;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-/* eligible project and bonus section started from here */
-
-.eligible-project-bonus-section {
-  margin: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  --pb-default-padding--: 1em;
-}
-
-.project-area,
-.bonus-area,
-.referral-status-bar {
-  padding: var(--pb-default-padding--);
-  background-color: white;
-  margin: 0 0.5rem;
-  box-shadow: var(--shadow--);
-  position: relative;
-}
-
-.icon-container > img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 0.5em;
-  border-radius: 50%;
-  animation: roll-icon 2s infinite;
-}
-
-.icon-container > img:hover {
-  animation-play-state: paused;
-  box-shadow: var(--shadow--);
-}
-
-@keyframes roll-icon {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon-main-container,
-.bonus-area-tabs,
-.referral-area-tabs {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.referral-status-bar {
-  grid-column: 1/6;
-  margin: 1rem auto;
-}
-
-.referral-status-heading {
-  text-align: center;
-}
-
-.referral-details {
-  margin: 0 2rem;
-}
-
-.fa-info-circle:hover {
-  box-shadow: 0 0 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* tooltip area started from here */
-
-.icon-tool-tip::after {
-  content: "Here you can see your Referrals progress towards the referral bonus!";
-  background-color: blue;
-  color: #fff;
-  padding: 0.5em;
-  border-radius: 0.3rem;
-  width: 200px;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  position: absolute;
-  bottom: 6rem;
-  left: 2.5rem;
-  z-index: 12;
-  display: none;
-  transition: 1s;
-  font-weight: 400;
-}
-
-.icon-tool-tip:hover::after {
-  display: unset;
-}
-
-.ref-tool-tip::after {
-  bottom: 5rem;
-}
-
-.bonuses-tooltip::after {
-  content: "Here you can see your bonuses regarding your work. as well as earned referral bonus.";
-}
-
-.project-tooltip::after {
-  content: "Here you can see your eligible projects. On which you can work after graduating from our bootcamp training!";
-}
-
-/* notificaton-area started from here */
-
-.notificaton-area {
-  box-shadow: 0 0 0.2rem black;
-  border-radius: 0.5rem;
-  --noti-padding--: 0 1em;
-  position: absolute;
-  right: 50%;
-  top: 100%;
-  --noti-font-size--: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--noti-font-size--);
-  z-index: 12;
-  display: none;
-  background-color: white;
-}
+/* ===========sidebar================= */
 
-.inbox-content {
+.sidebar-panel {
+  background-color: #ecf0f1;
   width: 300px;
-  height: 300px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  padding: var(--normal-padding--);
+  height: 100vh;
+  box-shadow: var(--box-shadow--);
 }
 
-.noti-title-container {
-  padding: var(--noti-padding--);
+.sidebar-panel .sidebar-header {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   justify-content: space-between;
-  background-color: whitesmoke;
 }
 
-.admin-message-area {
+.sidebar-header .logo-area {
   display: flex;
   align-items: center;
-  padding: 1em;
-  background-color: white;
-  border-bottom: 1px solid gainsboro;
-  gap: 1rem;
-  cursor: pointer;
 }
 
-.admin-name {
-  font-weight: bold;
+.sidebar {
+  margin-top: 1.5rem;
+  position: relative;
 }
 
-.clear-btn {
-  text-decoration: underline;
-  color: blue;
-}
-
-.clear-btn:hover {
-  color: red;
-  transition: 0.2s ease-in-out;
-}
-
-.message-time {
-  color: gray;
-  padding: 0.3rem;
-}
-
-.admin-message {
+.sidebar .options {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.profile {
-  align-self: flex-start;
-  border-radius: 50%;
-}
-
-/* Task log Css started from here */
-
-/* task log container one */
-
-.task-details-area {
-  display: grid;
-  grid-template-columns: 400px 450px;
-  align-items: center;
-  justify-content: center;
-}
-
-.task-log-container-one,
-.task-log-container-two,
-.task-log-container-three {
-  background-color: blue;
-  color: white;
-  margin: 1rem;
-  border-radius: 5px;
-}
-
-.task-log-container-three {
-  grid-column: 1/3;
-}
-
-.task-log-container-one {
-  padding: 1em;
-}
-
-.yellow,
-.green,
-.red {
-  padding: 0.7em;
-  border-radius: 100%;
-}
-
-.color-dot-box {
-  margin: 1rem;
-  display: flex;
-  gap: 3rem;
-}
-
-.yellow {
-  background-color: yellow;
-}
-.red {
-  background-color: red;
-}
-.green {
-  background-color: green;
-}
-
-/* container two started from here */
-
-.task-log-container-two {
-  padding: 1.5rem;
-  justify-content: center;
-  display: flex;
-  gap: 1rem;
-}
-
-.request-box-title {
-  font-size: 1.5rem;
-}
-
-.request-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  align-items: center;
-  outline-color: black;
-}
-
-.request-box > input {
-  padding: 0.5em 1em;
-}
-
-.request-box-title-tag {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.training-center,
-.training-support {
-  display: block;
-  padding: 0.7em 1.5em;
-  cursor: pointer;
-  box-shadow: 0 3px 5px 1px;
-  grid-column: 3/1;
-  border: none;
-  background-color: white;
+  gap: 2rem;
+  text-decoration: none;
   color: black;
+  font-weight: 500;
+  padding: var(--high-padding--);
+  position: relative;
+  margin: 0.5rem;
 }
 
-/* third task log details container started from here */
-
-.task-log-container-three {
-  padding: 1em;
-  width: 100%;
+.sidebar .options:hover,
+.sidebar .options:focus {
+  background-color: lightgray;
 }
 
-.task-details-row-container {
-  display: flex;
-  justify-content: space-between;
+.sidebar .options:focus:before,
+.sidebar .options:hover:before {
+  content: "";
+  height: 3px;
+  background-color: var(--container-GB-color--);
+  position: absolute;
+  bottom: 0;
+  animation: sidebar-line 300ms forwards;
+}
+
+@keyframes sidebar-line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 10%;
+  }
+}
+
+.sidebar .options:last-child {
+  margin-top: 2rem;
+}
+
+.sidebar .options > span {
+  color: var(--container-GB-color--);
 }
