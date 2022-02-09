@@ -16,37 +16,77 @@
 </head>
 
 <body>
-    <!-- =============sidebar=============== -->
-    <aside class="sidebar-panel">
-        <div class="sidebar-header">
-            <div class="logo-area">
-                <img src="img/favicon.PNG" alt="logo">
-                <h1 class="logo-full"><span class="logo-half">Octatasks</span></h1>
-            </div>
-            <span class="material-icons-sharp">close</span>
-        </div>
 
-        <div class="sidebar">
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">space_dashboard</span>
-                Dashboard
-            </a>
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">info</span>
-                Task log
-            </a>
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">school</span>
-                Training
-            </a>
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">support_agent</span>
-                Support
-            </a>
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">redeem</span>
-                Earn
-            </a>
-            <a href="#" class="options-hover options"><span class="material-icons-sharp">logout</span>
-                log out
-            </a>
-        </div>
-    </aside>
+    <div class="software-container">
+
+        <!-- =============sidebar=============== -->
+        <aside class="sidebar-panel">
+            <div class="sidebar-header">
+                <div class="logo-area">
+                    <img src="img/favicon.PNG" alt="logo">
+                    <h1 class="logo-full">Octa<span class="logo-half">tasks</span></h1>
+                </div>
+                <span class="material-icons-sharp close-btn">close</span>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="options-hover options"><span
+                        class="material-icons-sharp sidebar-icons">space_dashboard</span>
+                    Dashboard
+                </a>
+                <a href="#" class="options-hover options"><span class="material-icons-sharp sidebar-icons">info</span>
+                    Task log
+                </a>
+                <a href="#" class="options-hover options"><span class="material-icons-sharp sidebar-icons">school</span>
+                    Training
+                </a>
+                <a href="#" class="options-hover options"><span
+                        class="material-icons-sharp sidebar-icons">support_agent</span>
+                    Support
+                </a>
+                <a href="#" class="options-hover options earn-dollars"><span
+                        class="material-icons-sharp sidebar-icons">redeem</span>
+                    Earn
+                </a>
+                <a href="#" class="log-out-btn options"><span class="material-icons-sharp sidebar-icons">logout</span>
+                    log out
+                </a>
+            </div>
+        </aside>
+
+        <section class="main-dashboard">
+            <div class="user-data-container">
+                <div class="hours-icon-container">
+                    <span class="material-icons-sharp icon-resize">hourglass_bottom</span>
+                </div>
+                <div class="progress-container">
+                    <div class="user-data-title">Working Hours</div>
+                    <div class="progress-circle">
+                        <span class="hours-count">30</span>
+                    </div>
+                </div>
+                <div class="count-data working-month">March</div>
+            </div>
+            <div class="user-data-container">
+                <div class="hours-icon-container">
+                    <span class="material-icons-sharp icon-resize">attach_money</span>
+                </div>
+                <div class="progress-container">
+                    <div class="user-data-title">Your Earnings</div>
+                    <div class="count-data earning-count">100$</div>
+                </div>
+            </div>
+            <div class="user-data-container">
+                <div class="hours-icon-container">
+                    <span class="material-icons-sharp icon-resize">task</span>
+                </div>
+                <div class="progress-container">
+                    <div class="user-data-title">Attempts</div>
+                    <div class="count-data working-Tasks">20</div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
