@@ -20,140 +20,49 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #ecf0f1;
-}
+/* =========== Sidebar========== */
 
-.software-container {
+.system-container {
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
-}
-
-/* ===========sidebar================= */
-
-.sidebar-panel {
-  background-color: var(--small-container-color--);
-  padding: var(--normal-padding--);
-  height: 100vh;
-}
-
-.logo-full {
-  color: blue;
-}
-
-.logo-half {
-  color: black;
-}
-
-.sidebar-panel .sidebar-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: space-between;
-  padding: var(--normal-padding--);
-}
-
-.sidebar-header .logo-area {
-  display: flex;
-  align-items: center;
+  /* grid-template-columns: 300px auto 300px; */
 }
 
 .sidebar {
-  margin-top: 1.5rem;
-  position: relative;
-}
-
-.sidebar .options {
-  position: relative;
-  display: flex;
-  gap: 2rem;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  padding: var(--high-padding--);
-  margin: 0.5rem 0;
-  align-items: center;
-  outline: white;
-}
-
-.sidebar .options-hover:hover,
-.sidebar .options-hover:focus {
-  background-color: blue;
-  color: white;
-  border-radius: var(--border-radius-low--);
-}
-
-.sidebar .log-out-btn {
-  position: absolute;
-  bottom: -50%;
-  width: 100%;
-  padding: 1rem;
-  align-items: center;
-}
-
-.sidebar .options > span {
-  color: var(--container-GB-color--);
-}
-
-.close-btn {
-  background-color: blue;
-  padding: 0.2em;
-  color: var(--container-color--);
-  display: none;
-}
-
-.options .sidebar-icons {
+  height: 100vh;
   background-color: white;
-  padding: 5px;
-  border-radius: var(--border-radius-low--);
+  position: relative;
+  border: 1px solid black;
+  width: 300px;
 }
 
-.earn-dollars::after {
-  content: "2$";
-  background-color: crimson;
-  align-items: center;
+.sidebar-content .list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-cancel-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background-color: blue;
   padding: 0.5rem;
-  border-radius: 100%;
   color: white;
+  border-radius: 20%;
 }
 
-/* =========== main dashboard */
-
-.main-dashboard {
-  margin-top: 1rem;
-}
-
-.main-dashboard .main-dash-heading {
-  font-size: 2rem;
-  text-align: left;
-  margin: 1rem;
-  color: var(--color--);
-}
-
-.main-dashboard .user-data-container {
-  background-color: var(--small-container-color--);
-  margin: 1rem;
-  padding: var(--high-padding--);
-}
-
-.progress-container {
+.sidebar-head {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
-.progress-circle {
-  width: 150px;
-  border-radius: 100%;
-  height: 150px;
-  border: 15px solid var(--container-GB-color--);
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+.logo-text {
+  color: blue;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.icon-resize {
-  font-size: 3rem;
+.logo-text span {
+  color: black;
 }
