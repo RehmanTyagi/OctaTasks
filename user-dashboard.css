@@ -2,15 +2,14 @@
   --low-padding--: 0.5em;
   --normal-padding--: 1em;
   --high-padding--: 1.5em;
-  --container-GB-color--: blue;
+  --standard-color--: red;
   --container-color--: white;
   --small-container-color--: white;
-  --box-shadow--: 0 0em 2em 0em gray;
+  --box-shadow--: 2px 3px 2px 1px lightgray;
   --border-radius-low--: 0.5rem;
   --border-radius-normal--: 1rem;
   --border-radius-medium--: 1.5rem;
   --border-radius-high--: 2rem;
-  --color--: blue;
 }
 
 * {
@@ -20,4 +19,114 @@
   font-family: "Poppins", sans-serif;
 }
 
+.dashboard-container {
+  height: 100vh;
+}
 /* =========== Sidebar========== */
+
+.sidebar {
+  width: 270px;
+  background-color: #ffffff;
+  box-shadow: var(--box-shadow--);
+  height: 100%;
+}
+
+.sidebar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  color: red;
+}
+.logo > span {
+  color: black;
+}
+
+.close-btn {
+  display: none;
+}
+
+.sidebar .sidebar-content {
+  padding: 1rem;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+
+.list-item .list-item_link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 1.5rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  color: rgb(51, 51, 51);
+  position: relative;
+  background-color: rgba(228, 228, 228, 0.116);
+  border-radius: 12px;
+}
+
+.list-item .list-item_link:hover,
+.list-item .list-item_link:focus {
+  background-color: #eee;
+  color: var(--standard-color--);
+}
+
+.list-item .list-item_link:hover::before,
+.list-item .list-item_link:focus::before {
+  content: "";
+  height: 70%;
+  border-radius: 12px;
+  padding: 3px;
+  left: 0;
+  position: absolute;
+  background-color: var(--standard-color--);
+}
+.active:focus,
+.active.hover {
+  color: blue;
+}
+
+.welcome-icon {
+  position: relative;
+}
+
+.welcome-icon::after {
+  content: "$2";
+  position: absolute;
+  right: 5%;
+  background-color: var(--standard-color--);
+  color: white;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.sidebar-footer {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.sidebar-footer .logout-btn {
+  background-color: red;
+  color: white;
+  padding: 0.6em 2em;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.close-btn {
+  background-color: var(--standard-color--);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: white;
+}
