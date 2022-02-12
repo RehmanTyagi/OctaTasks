@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Octatasks</title>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="user-dashboard.css" />
-  </head>
 
-  <body>
-    <div class="dashboard-container">
-      <aside class="sidebar">
-        <div class="sidebar-head">
-          <h1 class="logo">Octa<span>Tasks</span></h1>
-          <span class="close-btn material-icons-sharp">multiple_stop</span>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octatasks</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="user-dashboard.css" />
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h1 class="logo">Octa<span>Tasks</span></h1>
+        <span class="close-btn material-icons-sharp">multiple_stop</span>
+      </div>
+      <div class="content-end-container">
 
         <div class="sidebar-content">
           <ul class="list-container">
             <li class="list-item">
-              <a href="#" class="list-item_link active"
-                ><span class="material-icons-sharp sidebar-icons"
-                  >dashboard</span
-                >Dashboard</a
-              >
+              <span class="material-icons-sharp sidebar-icons">dashboard</span>
+              <a href="#" class="list-item_link active">Dashboard</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-item_link"
-                ><span class="material-icons-sharp sidebar-icons">task</span
-                >Tasklog</a
-              >
+              <span class="material-icons-sharp sidebar-icons">task</span>
+              <a href="#" class="list-item_link">Tasklog</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-item_link"
-                ><span class="material-icons-sharp sidebar-icons">school</span
-                >Training Center</a
-              >
+              <span class="material-icons-sharp sidebar-icons">school</span>
+              <a href="#" class="list-item_link">Training
+                Center</a>
             </li>
             <li class="list-item">
-              <a href="#" class="list-item_link"
-                ><span class="material-icons-sharp sidebar-icons">support</span
-                >Support Center</a
-              >
+              <span class="material-icons-sharp sidebar-icons">support</span>
+              <a href="#" class="list-item_link">Support
+                Center</a>
             </li>
-            <li class="list-item">
-              <a href="#" class="list-item_link welcome-icon"
-                ><span class="material-icons-sharp sidebar-icons">redeem</span
-                >Earn Rewards</a
-              >
+            <li class="list-item earn-icon">
+              <span class="material-icons-sharp sidebar-icons">redeem</span>
+              <a href="#" class="list-item_link">Earn Rewards</a>
             </li>
           </ul>
         </div>
@@ -65,7 +54,34 @@
         <div class="sidebar-footer">
           <a href="#" class="logout-btn">Logout</a>
         </div>
-      </aside>
-    </div>
-  </body>
+
+      </div>
+    </aside>
+
+    <!-- /* ======== main Display area ============ */ -->
+
+    <main class="dashboard">
+      <h1 class="dashboard_heading">Your Insights</h1>
+
+      <div class="analytics-area">
+        <div class="analytics_container">
+          <h2 class="working-hours_heading">Working Hours</h2>
+          <div class="working-hours_circle">19 <div class="working-hours_circle circle-overlap"></div>
+          </div>
+          <div class="active-month">
+            <div class="active-month_heading"></div>
+            <span class="day">29</span>
+            <span class="month">07</span>
+            <span class="year">2022</span>
+          </div>
+        </div>
+        <div class="analytics_container">
+          <h2 class="working-attempts_heading">Attempts</h2>
+          <div class="working-attempts_circle">21</div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
