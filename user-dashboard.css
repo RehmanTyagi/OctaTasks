@@ -157,27 +157,35 @@
   align-items: center;
 }
 
-.working-hours_heading,
-.working-attempts_heading {
-  align-self: flex-start;
-}
-
-.working-hours_circle {
-  background-color: transparent;
-  border: 10px solid red;
+.progress-circle {
+  width: 200px;
   height: 150px;
-  width: 150px;
   border-radius: 50%;
-  margin: 1rem;
-  position: relative;
 }
 
-.circle-overlap {
-  position: absolute;
-  top: 0;
-  border-color: black;
-  left: -20%;
-  transform: translateY(-17.5%);
+.progress-circle .inner_circle {
+  fill: transparent;
+  stroke: red;
+  stroke-width: 10;
+  stroke-dasharray: 400;
+}
+
+.second-inner_circle {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 12;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: red-progress-circle 10s linear forwards;
+}
+
+@keyframes red-progress-circle {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 50;
+  }
 }
 
 /* =========tablet or laptop media query */
@@ -199,6 +207,7 @@
     z-index: 1;
     width: 280px;
     box-shadow: var(--box-shadow--);
+    display: none;
   }
 
   .dashboard-container {
