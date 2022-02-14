@@ -151,7 +151,9 @@
 .analytics_container {
   background-color: #eee;
   margin: 1rem;
+  border-radius: 10px;
   padding: 1em;
+  box-shadow: var(--box-shadow--);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,19 +163,34 @@
   width: 200px;
   height: 150px;
   border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar::after {
+  content: "7H";
+  position: absolute;
+  left: 49%;
+  top: 50%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transform: translateX(-30%) translateY(-60%);
 }
 
 .progress-circle .inner_circle {
   fill: transparent;
-  stroke: red;
+  stroke: black;
   stroke-width: 10;
   stroke-dasharray: 400;
 }
 
 .second-inner_circle {
   fill: transparent;
-  stroke: white;
-  stroke-width: 12;
+  stroke: red;
+  stroke-width: 10.5;
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
   animation: red-progress-circle 10s linear forwards;
@@ -207,7 +224,7 @@
     z-index: 1;
     width: 280px;
     box-shadow: var(--box-shadow--);
-    display: none;
+    /* display: none; */
   }
 
   .dashboard-container {
