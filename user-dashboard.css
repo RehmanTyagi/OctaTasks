@@ -149,11 +149,12 @@
   justify-content: center;
 }
 .analytics_container {
-  background-color: #eee;
+  /* background-color: #eee; */
+  border: 1.5px solid rgb(190, 190, 190);
   margin: 1rem;
   border-radius: 10px;
   padding: 1em;
-  box-shadow: var(--box-shadow--);
+  box-shadow: 0 0 0.5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,7 +225,7 @@
     z-index: 1;
     width: 280px;
     box-shadow: var(--box-shadow--);
-    /* display: none; */
+    display: none;
   }
 
   .dashboard-container {
