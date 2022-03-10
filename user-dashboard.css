@@ -246,4 +246,9 @@
   .dashboard-container {
     grid-template-columns: 1fr;
   }
+
+  .analytics_container{
+    display: flex;
+    flex-direction: column;
+  }
 }
