@@ -27,8 +27,10 @@
 /* =========== Sidebar========== */
 
 .sidebar {
-  background-color: #ffffff;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: .5px solid lightgray;
 }
 
 .sidebar-head {
@@ -36,6 +38,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+}
+
+.active{
+  background-color: #eee !important;
 }
 
 .logo {
@@ -46,7 +52,7 @@
 }
 
 .close-btn {
-  /* display: none; */
+  display: none;
 }
 
 .sidebar .sidebar-content {
@@ -136,6 +142,7 @@
 
 .dashboard {
   padding: 1.5rem;
+
 }
 
 .dashboard_heading {
@@ -149,15 +156,18 @@
   justify-content: center;
 }
 .analytics_container {
-  /* background-color: #eee; */
   border: 1.5px solid rgb(190, 190, 190);
   margin: 1rem;
   border-radius: 10px;
   padding: 1em;
   box-shadow: 0 0 0.5px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.working-hours_heading{
+  font-weight: 500;
 }
 
 .progress-circle {
@@ -171,14 +181,19 @@
   position: relative;
 }
 
-.progress-bar::after {
-  content: "7H";
+.progress-bar::after,.reward-progress_bar::after {
+  content: "90%";
   position: absolute;
   left: 49%;
   top: 50%;
   font-size: 1.3rem;
   font-weight: bold;
   transform: translateX(-30%) translateY(-60%);
+}
+
+.reward-progress_bar::after{
+  content: "Rs400";
+  left: 43%;
 }
 
 .progress-circle .inner_circle {
@@ -219,7 +234,7 @@
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 730px) {
   .sidebar {
     position: fixed;
     z-index: 1;
